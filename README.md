@@ -1,2 +1,4 @@
 # Zuviar Learning Platform
-Master
+Music Technology Learning Platform.
+
+Pre-Alpha Version.
