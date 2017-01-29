@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/Template1.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!-- InstanceBeginEditable name="doctitle" -->
+	<title>Learning Platform</title><!-- InstanceEndEditable -->
+	<link href="../CSS1.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+</head>
+<body>
+	<div class="Header">
+		<h1><img src="../images/Learning-Logo.jpg" width="151" height="44"></h1>
+	</div>
+	<div class="Nav">
+		<ul>
+			<li>
+				<a href="../Home.html">Home <img height="16" src="../images/home.png" width="16"></a>
+			</li>
+			<li>
+				<a href="../About.html">About</a>
+			</li>
+			<li>
+				<a href="../Help.html">Help</a>
+			</li>
+		</ul>
+	</div>
+	<div class="Body">
+		<!-- InstanceBeginEditable name="MainContent" -->
+		<h1>Ardour Installation
+		</h1>
+		<p>You should have been able to download a file whose name ends in ".run" and saved it to disk. Because Linux is a secure operating system in general, files you download are not automatically runnable as programs.</p>
+		<p>Start the install process by opening a Terminal window (typically from the system's main menu, within the System Tools or Accessories submenus) and then type the following commands:</p>
+		<pre>cd /folder/where/you/saved/the/file  /bin/sh ./&lt;DOWNLOADED_FILENAME&gt;.run
+</pre>
+		<p>Do not run these commands as root. The installation will ask you for any passwords if necessary. Running as root may cause the installation to fail.</p>
+		<p>Some output will appear in the Terminal window, and you will be asked to press the Return key finish the installation.</p>
+		<h1>Building Ardour</h1>
+<h2>Getting Required Libraries and Tools</h2>
+    <p>Ardour uses a <strong>lot</strong> of software libraries to provide functionality needed by the program. Before you can build Ardour, you will need to make sure that your system has all of <a href="https://ardour.org/current_dependencies.html">the current dependencies installed</a>. You can do this using your system's software update/install tool, or if you are comfortable compiling source code, from the source code of each dependency.</p>
+<p>Building GTK+ (the graphical toolkit we use) from source is a monumental task and can require a lot of other libraries to be built and installed along the way. This is particularly true on OS X, where many of GTK's own dependencies are not easily (or correctly) available.</p>
+    <p>If you use your system software update/install tool, you must have the "development" versions of all packages. The "normal" versions are there to be able to run software that uses the package, but they do not work when trying to <em>build</em> other software.</p>
+<h2>Building Ardour 5.x</h2>
+    <p>From here on, we will refer to the directory where your Ardour source code is located as $AD. It does not matter where it is located on your system. Typically it will be a location such as ~/ardour or maybe /usr/local/src/ardour</p>
+    <h4>If building from git, checkout Ardour</h4>
+    <pre>cd $AD  git clone git://git.ardour.org/ardour/ardour.git &lt;VERSION&gt;  cd $AD/&lt;VERSION&gt;        </pre>
+    <h4>OR If building from a source tarball, unpack it</h4>
+    <pre>cd $AD  tar xf /where/you/put/the/src/tarball  cd ardour-&lt;VERSION&gt;        </pre>
+    <p>Now, the build</p>
+    <pre>./waf configure  ./waf        </pre>
+    <p>You <strong>do not need to install</strong> in order to use your new build of Ardour. You can run it from within the build tree:</p>
+    <pre>cd gtk2_ardour  ./ardev  	  </pre>
+    <p>To install the results:</p>
+    <pre>./waf install  	  </pre>
+    <p>To uninstall:</p>
+    <pre>./waf uninstall  	  </pre>
+    <p>To clean up results of a build (objects, libraries, etc) use</p>
+    <pre>./waf clean  	  </pre>
+    <h3>Creating an Application Bundle</h3>
+    <p>Ardour is distributed by ardour.org in the form of "bundles", which are nothing more than a directory tree which contain everything the app needs to run.</p>
+    <pre>cd tools/linux_packaging  ./build --public --strip some  ./package --public --singlearch        </pre>
+    <p>You now have a functioning binary bundle, in the form a .tar file.</p>
+    
+	    
+		<p>&nbsp;</p>
+        <!-- InstanceEndEditable -->
+	</div>
+	<footer>
+		<div align="center">
+			<p>Learning Resources &copy; 2017. R1.0 Alpha. All Rights Reserved</p><a href="http://www.w3.org/html/logo/"></a><a href="http://www.w3.org/html/logo/"><img alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" height="64" src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics.png" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, and Semantics" width="197"></a>
+		</div><!-- Start of SimpleHitCounter Code -->
+		<div align="center"><img border="0" height="18" src="http://simplehitcounter.com/hit.php?uid=2215931&f=16777215&b=0" width="83"></div><!-- End of SimpleHitCounter Code -->
+	</footer>
+</body>
+<!-- InstanceEnd --></html>
