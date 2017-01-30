@@ -112,3 +112,20 @@ tr td:hover {
 .list {
 	list-style-type: disc;
 }
+
+pre {
+    font-size: 90%;
+    line-height: 1.2em;
+    font-family: "Courier 10 Pitch", Courier, monospace; 
+    white-space: pre; 
+    white-space: pre-wrap; 
+    white-space: -moz-pre-wrap; 
+    white-space: -o-pre-wrap; 
+
+    height:1%;
+    width: auto;
+    display: block;
+    clear: both;
+    color: #000;
+    padding: 1em 1em;
+    margin: auto 40px auto 40px;
