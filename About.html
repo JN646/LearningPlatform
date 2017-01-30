@@ -36,7 +36,28 @@
   <p>We aim to keep the file sizes low. The interface and HTML content will run on any device regardless of internet speed.</p>
   <h2>Donate</h2>
   <p>Help us to keep creating resources.</p>
-  <p>&nbsp;</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business"
+        value="donations@zuviar.co.uk">
+
+    <!-- Specify a Donate button. -->
+    <input type="hidden" name="cmd" value="_donations">
+
+    <!-- Specify details about the contribution -->
+    <input type="hidden" name="item_name" value="Zuviar Learning">
+    <input type="hidden" name="item_number" value="Donation">
+    <input type="hidden" name="currency_code" value="GBP">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_donate_92x26.png"
+    alt="Donate">
+    <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+</form>
 <!-- InstanceEndEditable -->
 	</div>
 	<footer>
