@@ -33,7 +33,7 @@
 	<footer>
 		<div align="center">
 			<p>Learning Resources &copy; 2017. R1.0 Alpha. All Rights Reserved</p>
-			<p><a href="#">Privacy</a> | <a href="#">Cookies</a> | <a href="#">Data Protection</a> | <a href="#">Sales</a></p>
+			<p><a href="../Shared/privacy.html">Privacy</a> | <a href="../Shared/cookies.html">Cookies</a> | <a href="../Shared/data_protection.html">Data Protection</a> | <a href="../Shared/sales.html">Sales</a></p>
 <a href="http://www.w3.org/html/logo/">
 <img src="https://www.w3.org/html/logo/badge/html5-badge-h-css3-performance-semantics-storage.png" width="229" height="70" alt="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Performance &amp; Integration, Semantics, and Offline &amp; Storage">
 </a>
